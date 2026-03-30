@@ -1,0 +1,19 @@
+import { getTestIds } from "../components/ads/adsRuntime";
+
+const IS_DEV = __DEV__;
+const TEST_IDS = getTestIds();
+
+export const AD_UNITS = {
+  BANNER_HOME: IS_DEV ? TEST_IDS.ADAPTIVE_BANNER : "ca-app-pub-5511327776730997/7736211367",
+  BANNER_CURRENCIES: IS_DEV ? TEST_IDS.ADAPTIVE_BANNER : "ca-app-pub-5511327776730997/7736211368",
+  BANNER_METALS: IS_DEV ? TEST_IDS.ADAPTIVE_BANNER : "ca-app-pub-5511327776730997/7736211369",
+  BANNER_CRYPTO: IS_DEV ? TEST_IDS.ADAPTIVE_BANNER : "ca-app-pub-5511327776730997/7736211370",
+  INTERSTITIAL: IS_DEV ? TEST_IDS.INTERSTITIAL : "ca-app-pub-5511327776730997/7736211371",
+  APP_OPEN: IS_DEV ? TEST_IDS.APP_OPEN : "ca-app-pub-5511327776730997/7736211372",
+  REWARDED: IS_DEV ? TEST_IDS.REWARDED : "ca-app-pub-5511327776730997/7736211373",
+};
+
+export const AD_REQUEST_OPTIONS = {
+  requestNonPersonalizedAdsOnly: false,
+  keywords: ["currency", "finance", "iraq", "gold", "forex"],
+};

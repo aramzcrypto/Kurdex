@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Kurdex Markets",
+    "slug": "kurdex",
+    "scheme": "kurdex",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0D0D0D"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "plugins": ["expo-router"],
+    "ios": {
+      "bundleIdentifier": "com.kurdex.markets",
+      "supportsTablet": true,
+      "buildNumber": "1",
+      "infoPlist": {
+        "GADApplicationIdentifier": "ca-app-pub-XXXX~XXXX",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        }
+      }
+    },
+    "android": {
+      "package": "com.kurdex.markets",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0D0D0D"
+      },
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-5511327776730997~7736211367"
+      }
+    },
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
