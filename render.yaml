@@ -1,0 +1,32 @@
+services:
+  # Kurdex Backend API
+  - type: web
+    name: kurdex-backend
+    env: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      # Add your backend env variables here later (JWT_SECRET, etc.)
+
+  # Kurdex Web App (Next.js)
+  - type: web
+    name: kurdex-web
+    env: node
+    rootDir: web
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start -- -p $PORT
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          name: kurdex-backend
+          type: web
+          property: host
