@@ -1,9 +1,11 @@
 {
   "name": "kurdex",
   "version": "1.0.0",
-  "main": "expo-router/entry",
+  "main": "backend/server.js",
   "scripts": {
-    "start": "expo start",
+    "start": "cd backend && node server.js",
+    "build": "cd backend && npm install",
+    "expo:start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
